@@ -53,7 +53,7 @@
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Your blood"
+        android:hint="Enter Your blood Group"
         android:inputType="text"
         android:drawableLeft="@drawable/baseline_bloodtype_24"
         android:drawablePadding="10dp"

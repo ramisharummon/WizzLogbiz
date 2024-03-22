@@ -20,6 +20,7 @@
         android:layout_marginBottom="40dp"/>
 
     <EditText
+        android:id="@+id/editTextName"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,6 +31,7 @@
 
 
     <EditText
+        android:id="@+id/editTextEmail"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,28 +42,31 @@
 
 
     <EditText
+        android:id="@+id/editTextPhone"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Your phone Number"
-        android:inputType="textPhonetic"
+        android:inputType="text"
         android:drawableLeft="@drawable/baseline_call_24"
         android:drawablePadding="10dp"/>
-
-    <AutoCompleteTextView
-        android:id="@+id/bloodgroup"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Your blood Group"
-        android:inputType="text"
-        android:drawableLeft="@drawable/baseline_bloodtype_24"
-        android:drawablePadding="10dp"
-        android:completionThreshold="1"/>
 
 
 
     <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Username"
+        android:inputType="text"
+        android:drawableLeft="@drawable/baseline_account_circle_24"
+        android:drawablePadding="10dp"/>
+
+
+
+    <EditText
+        android:id="@+id/editTextPassword"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,6 +74,9 @@
         android:inputType="textPassword"
         android:drawableLeft="@drawable/baseline_lock_open_24"
         android:drawablePadding="10dp"/>
+
+
+>
 
 
     <CheckBox

@@ -8,19 +8,22 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.WindowDecorActionBar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    EditText editTextName, editTextEmail, editTextPhone, editTextPassword, editTextUsername;
     CheckBox checkBox;
 
     Button button;
-    AutoCompleteTextView bloodgroup;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,37 +41,45 @@ public class MainActivity extends AppCompatActivity {
         checkBox = findViewById(R.id.checkboxID);
 
         button = findViewById(R.id.signbtn);
+        editTextName = findViewById(R.id.editTextName);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPhone = findViewById(R.id.editTextPhone);
+        editTextUsername = findViewById(R.id.editTextUsername);
+        editTextPassword = findViewById(R.id.editTextPassword);
 
-        String[] bloodgroup = {"A+", "A-", "B+", "B-", "AB+", "AB+", "AB-", "O+", "O-"};
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, bloodgroup);
-        AutoCompleteTextView autoCompleteTextView = findViewById(R.id.bloodgroup);
-        autoCompleteTextView.setAdapter(adapter);
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean b) {
-                if (b == true) {
-                    button.setVisibility(View.VISIBLE);
-                } else {
-                    button.setVisibility(View.INVISIBLE);
-                }
-
+        checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked && areAllFieldsFilled()) {
+                button.setVisibility(View.VISIBLE);
+            } else {
+                button.setVisibility(View.GONE);
             }
         });
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Sign Up Done", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, profileActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-
+        button.setOnClickListener((View buttonView) -> signup());
         return insets;
 
+    }
 
+    private boolean areAllFieldsFilled() {
+        String name = editTextPhone.getText().toString();
+        String email = editTextEmail.getText().toString();
+        String phone = editTextPhone.getText().toString();
+        String password = editTextPassword.getText().toString();
+        String username = editTextUsername.getText().toString();
+
+
+        if (name.isEmpty() || email.isEmpty() || phone.isEmpty() || password.isEmpty() || username.isEmpty()) {
+            Toast.makeText(MainActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
+            return false;
+        } else {
+            return true;
+        }
+    }
+    private void signup() {
+        Toast.makeText(MainActivity.this, "Sign Up Done", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, profileActivity.class);
+        startActivity(intent);
     }
 }
+
 

@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/baseline_dashboard_24" />
+    <item
+        android:id="@+id/menu_home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24" />
+    <item
+        android:id="@+id/menu_private_files"
+        android:title="Private Files"
+        android:icon="@drawable/baseline_folder_shared_24" />
+    <item
+        android:id="@+id/menu_my_courses"
+        android:title="My Courses"
+        android:icon="@drawable/baseline_menu_book_24" />
+    <item
+        android:id="@+id/menu_attendance"
+        android:title="Attendance"
+        android:icon="@drawable/baseline_groups_24" />
+</menu>

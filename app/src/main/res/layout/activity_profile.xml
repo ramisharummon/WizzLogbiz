@@ -44,7 +44,8 @@
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text" />
+        android:inputType="text"
+        android:background="@drawable/edit_text_background"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -56,7 +57,8 @@
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text" />
+        android:inputType="text"
+        android:background="@drawable/edit_text_background"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,17 +69,55 @@
         android:id="@+id/editTextPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text" />
+        android:inputType="text"
+        android:background="@drawable/edit_text_background"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of Birth"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/editTextDOB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:background="@drawable/edit_text_background"/>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textStyle="bold" />
 
     <AutoCompleteTextView
         android:id="@+id/Gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Gender"
-
+        android:background="@drawable/edit_text_background"
         android:textStyle="bold"
         android:completionThreshold="1">
-</AutoCompleteTextView>
+    </AutoCompleteTextView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bloodgroup"
+        android:textStyle="bold" />
+
+    <AutoCompleteTextView
+        android:id="@+id/Bloodgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:background="@drawable/edit_text_background"
+        android:completionThreshold="1"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -88,7 +128,8 @@
         android:id="@+id/editTextclass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:background="@drawable/edit_text_background"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -100,7 +141,8 @@
         android:id="@+id/editTextInstitution"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:background="@drawable/edit_text_background"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -111,7 +153,8 @@
         android:id="@+id/editTextAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:background="@drawable/edit_text_background"/>
 
     <Button
         android:id="@+id/buttonSave"
